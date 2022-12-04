@@ -6,7 +6,7 @@
     "g": "npm run clean && ts-node generate",
     "prebuild": "npm run g",
     "build": "npm run g && vite build",
-    "clean": "rimraf 'src/{icon, index.ts}' 'dist'"
+    "clean": "rimraf 'src/{icon,index.ts}' 'dist'"
   },
   "keywords": [],
   "author": "",
