@@ -2,6 +2,7 @@
   "name": "@xunserver/util",
   "version": "0.0.1",
   "description": "",
+  "private": true,
   "scripts": {
     "build:es": "cross-env NODE_ENV=production tsc --module esnext --outDir dist/es",
     "build:lib": "cross-env NODE_ENV=production tsc --module CommonJS --outDir dist/lib",
