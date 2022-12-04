@@ -1,6 +1,6 @@
 {
   "name": "@xunserver/icon-vue",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "scripts": {
     "g": "npm run clean && ts-node generate",

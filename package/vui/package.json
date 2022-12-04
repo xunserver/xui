@@ -1,6 +1,6 @@
 {
   "name": "@xunserver/vui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "scripts": {
     "build": "vite build",
@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@xunserver/style": "^0.0.1",
+    "@xunserver/style": "^0.0.2",
     "@xunserver/eslint-config": "^0.0.7",
     "@xunserver/prettier-config": "^0.0.2",
     "vite-plugin-dts": "^1.4.1"
