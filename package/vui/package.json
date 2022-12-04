@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "build": "vite build",
+    "clean": "rimraf 'dist'",
     "dev": "vite"
   },
   "keywords": [],

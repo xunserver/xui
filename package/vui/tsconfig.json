@@ -9,6 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
+    "noImplicitAny": false,
     "allowJs": true,
     "sourceMap": true,
     "baseUrl": "./",
@@ -19,5 +20,5 @@
       "@service/*": ["src/component/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.vue"],
+  "include": ["src/**/*.ts", "src/**/*.vue"]
 }

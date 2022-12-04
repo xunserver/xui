@@ -6,7 +6,10 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      outputDir: 'dist/es',
+      outputDir: 'dist/esm',
+    }),
+    dts({
+      outputDir: 'dist/lib',
     }),
   ],
   publicDir: './src/public',
@@ -31,12 +34,12 @@ export default defineConfig({
         {
           format: 'es',
           entryFileNames: 'index.js',
-          dir: 'dist/es',
+          dir: 'dist/esm',
         },
         {
           format: 'cjs',
           entryFileNames: 'index.js',
-          dir: 'dist/cjs',
+          dir: 'dist/lib',
         },
       ],
     },
