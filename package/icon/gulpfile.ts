@@ -1,22 +1,20 @@
-import del from "del";
 import { src, dest, series } from "gulp";
+import File from "vinyl";
+import fs from "fs";
 import { pipe } from "@xunserver/util";
+import { rm } from "@xunserver/shell";
 import parseXML from "@rgrove/parse-xml";
+import rename from "gulp-rename";
+
 import { streamTransform } from "./plugin/streamTransform";
 import { svgo } from "./plugin/svgo";
 import { formateSvg } from "./plugin/svgFormat";
-import rename from "gulp-rename";
 import { genIcon } from "./plugin/genIcon";
 import { IconDef } from "./template/type";
-import File from "vinyl";
-import fs from "fs";
 
 const iconList: { svg: IconDef; file: File }[] = [];
 
-export const clean = () => del(["src", "dist"]);
-
 export default series(
-  clean,
   () => src("template/*").pipe(dest("src")),
   () =>
     src("svg/*")
