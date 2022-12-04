@@ -8,13 +8,21 @@ export default defineConfig({
     dts({
       outputDir: 'dist/es',
       tsConfigFilePath: './tsconfig.build.json',
-      entryRoot: './src'
+      entryRoot: './src',
+    }),
+    dts({
+      outputDir: 'dist/lib',
+      tsConfigFilePath: './tsconfig.build.json',
+      compilerOptions: {
+        module: 'commonjs',
+      },
+      entryRoot: './src',
     }),
   ],
   resolve: {
     alias: {
       '@': './',
-      '@src': './src'
+      '@src': './src',
     },
   },
   build: {
@@ -22,9 +30,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'dist/assets',
     minify: false,
-    external: [
-      '@xunserver/icon'
-    ],
+    external: ['@xunserver/icon'],
     // cssCodeSplit: true,
     rollupOptions: {
       external: ['vue'],

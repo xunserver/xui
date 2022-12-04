@@ -1,26 +1,27 @@
-const { resolve, relative } = require('path')
-const fs = require('fs')
-const shelljs = require('shelljs')
+const { resolve, relative } = require('path');
+const fs = require('fs');
+const shelljs = require('shelljs');
 
-shelljs.rm('-rf', './dist')
+shelljs.rm('-rf', './dist');
 
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const loadComponent = (dir) => {
-  const files = fs.readdirSync(dir)
+// 获取component下入口，按照组件打包代码
+const loadComponentEntry = (dir) => {
+  const files = fs.readdirSync(dir);
   return files.reduce((result, file) => {
     if (file.endsWith('.less') && file !== 'index.less') {
-      const noExtFileName = file.substring(0, file.lastIndexOf('.'))
-      result[noExtFileName] = `${dir}/${file}`
+      const noExtFileName = file.substring(0, file.lastIndexOf('.'));
+      result[noExtFileName] = `${dir}/${file}`;
     }
-    return result
-  }, {})
-}
+    return result;
+  }, {});
+};
 
 module.exports = {
   entry: {
     index: './src/index.less',
-    ...loadComponent('./src/component'),
+    ...loadComponentEntry('./src/component'),
   },
   output: {
     path: resolve(__dirname, 'dist'),
@@ -43,13 +44,14 @@ module.exports = {
             loader: 'less-loader',
             options: {
               additionalData: (fileContent, loaderContext) => {
-                const { resourcePath, rootContext } = loaderContext
-                const relativePath = relative(rootContext, resourcePath)
+                //
+                const { resourcePath, rootContext } = loaderContext;
+                const relativePath = relative(rootContext, resourcePath);
                 if (relativePath.includes('component')) {
-                  return `@import '../common'; ${fileContent}`
+                  return `@import '../common'; ${fileContent}`;
                 }
 
-                return fileContent
+                return fileContent;
               },
             },
           },
@@ -58,4 +60,4 @@ module.exports = {
     ],
   },
   plugins: [new MiniCssExtractPlugin()],
-}
+};

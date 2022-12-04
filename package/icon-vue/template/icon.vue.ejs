@@ -1,4 +1,4 @@
-import { h } from 'vue';
+import { h, App } from 'vue';
 import IconBase  from '../component/IconBase'
 import { <%= name %> as iconDef } from '@xunserver/icon'
 
@@ -7,7 +7,7 @@ export const <%= name %> = () => {
 }
 
 export default {
-  install(app) {
+  install(app: App) {
     app.component('<%= name %>Icon', <%= name %>)
   }
 }

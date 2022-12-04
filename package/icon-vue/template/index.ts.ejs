@@ -1,3 +1,4 @@
+import { App } from 'vue'
 import SvgBase from './component/SvgBase';
 import IconBase from './component/IconBase';
 <%- importString %>
@@ -6,8 +7,7 @@ export { SvgBase, IconBase }
 <%- exportString %>
 
 export default {
-  install(app) {
+  install(app: App) {
     <%- install %>
   }
 }
-

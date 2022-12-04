@@ -4,9 +4,8 @@
   "description": "",
   "main": "dist/index.css",
   "scripts": {
-    "build": "webpack --config webpack.config.js && npm run clean",
-    "pub": "npm run build && node publish.js",
-    "clean": "node clean.js"
+    "build": "npm run clean && webpack --config webpack.config.js && rimraf 'dist/*.js'",
+    "clean": "rimraf 'dist'"
   },
   "keywords": [],
   "author": "",
