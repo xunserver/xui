@@ -52,7 +52,7 @@ importers:
       '@types/through2': ^2.0.36
       '@types/vinyl': ^2.0.6
       '@xunserver/shell': ^0.0.7
-      '@xunserver/util': workspace:*
+      '@xunserver/util': ^0.0.3
       ejs: ^3.1.8
       gulp: ^4.0.2
       gulp-rename: ^2.0.0
@@ -70,7 +70,7 @@ importers:
       '@types/through2': 2.0.38
       '@types/vinyl': 2.0.7
       '@xunserver/shell': 0.0.7
-      '@xunserver/util': link:../util
+      '@xunserver/util': 0.0.3
       ejs: 3.1.8
       gulp: 4.0.2
       gulp-rename: 2.0.0
@@ -83,13 +83,13 @@ importers:
       '@types/ejs': ^3.1.1
       '@xunserver/icon': workspace:*
       '@xunserver/prettier-config': ^0.0.3
-      '@xunserver/util': workspace:*
+      '@xunserver/util': ^0.0.3
       ejs: ^3.1.8
     devDependencies:
       '@types/ejs': 3.1.1
       '@xunserver/icon': link:../icon
       '@xunserver/prettier-config': 0.0.3
-      '@xunserver/util': link:../util
+      '@xunserver/util': 0.0.3
       ejs: 3.1.8
 
   package/style:
@@ -116,14 +116,11 @@ importers:
       webpack: 5.75.0_webpack-cli@4.10.0
       webpack-cli: 4.10.0_webpack@5.75.0
 
-  package/util:
-    specifiers: {}
-
   package/vui:
     specifiers:
       '@xunserver/eslint-config': ^0.0.7
       '@xunserver/prettier-config': ^0.0.2
-      '@xunserver/style': ^0.0.1
+      '@xunserver/style': ^0.0.2
       vite-plugin-dts: ^1.4.1
     devDependencies:
       '@xunserver/eslint-config': 0.0.7
@@ -1440,6 +1437,10 @@ packages:
       stylelint-less: ^1.0.6
       stylelint-order: ^5.0.0
       stylelint-scss: ^4.3.0
+    dev: true
+
+  /@xunserver/util/0.0.3:
+    resolution: {integrity: sha512-Wl8+jWChjzZ3C/mocGH3IC83yJJB9ssK1ZnjSH+q8awI/+j4bunKif1J5f7N+BBJsylw1EfrESTX5srB12krxw==}
     dev: true
 
   /acorn-import-assertions/1.8.0_acorn@8.8.1:

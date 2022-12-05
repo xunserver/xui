@@ -10,7 +10,7 @@ const templateContent = {
   install: '',
 }
 
-ignoreError(() => mkdirSync('./src/icon'))
+ignoreError(() => mkdirSync('./src/icon'), null)
 
 icons.forEach(async ([name, icon]) => {
   const string = await renderFile('./template/icon.vue.ejs', {
