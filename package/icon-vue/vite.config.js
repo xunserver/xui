@@ -39,7 +39,7 @@ export default defineConfig({
         {
           format: 'es',
           entryFileNames: 'index.js',
-          dir: 'dist/es',
+          dir: 'dist/esm',
         },
         {
           format: 'cjs',

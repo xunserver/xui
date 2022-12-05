@@ -16,12 +16,12 @@
     "@xunserver/prettier-config": "^0.0.2",
     "vite-plugin-dts": "^1.4.1"
   },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/es/index.js",
+  "main": "./dist/lib/index.js",
+  "module": "./dist/esm/index.js",
   "exports": {
     ".": {
-      "import": "./dist/es/index.js",
-      "require": "./dist/cjs/index.js"
+      "import": "./dist/esm/index.js",
+      "require": "./dist/lib/index.js"
     }
   },
   "files": [

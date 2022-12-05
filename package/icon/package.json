@@ -3,10 +3,10 @@
   "version": "0.0.8",
   "description": "",
   "main": "./dist/lib/index.js",
-  "module": "./dist/es/index.js",
+  "module": "./dist/esm/index.js",
   "exports": {
     ".": {
-      "import": "./dist/es/index.js",
+      "import": "./dist/esm/index.js",
       "require": "./dist/lib/index.js"
     }
   },
@@ -14,7 +14,7 @@
     "g": "npm run prebuild",
     "prebuild": "npm run clean && pnpm tsc --outdir .gulp && cross-env NODE_ENV=production pnpm gulp -f .gulp/gulpfile.js --cwd ./ -LLLL",
     "clean": "rimraf '.gulp' './src' './dist'",
-    "build:es": "cross-env NODE_ENV=production tsc --project tsconfig.build.json --module esnext --outDir dist/es",
+    "build:esm": "cross-env NODE_ENV=production tsc --project tsconfig.build.json --module esnext --outDir dist/esm",
     "build:lib": "cross-env NODE_ENV=production tsc --project tsconfig.build.json --module CommonJS --outDir dist/lib",
     "build": "npm run g && run-p build:*"
   },
