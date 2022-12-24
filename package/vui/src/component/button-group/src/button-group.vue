@@ -8,7 +8,7 @@ interface ButtonGroupProps {
 }
 
 const { size } = defineProps<ButtonGroupProps>()
-const addBtnPrefix = (cls = '') => `xs-btn-group${cls}`
+const addBtnPrefix = (cls = '') => `x-btn-group${cls}`
 const buttonGroupCls = reactive([
   addBtnPrefix(),
   addBtnPrefix(size === 'middle' || !size ? '' : '-' + size),

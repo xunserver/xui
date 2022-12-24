@@ -13,7 +13,7 @@ interface ButtonProps {
 }
 
 const { type, long, round, circle, loading, size } = defineProps<ButtonProps>()
-const addBtnPrefix = (cls = '') => `xs-btn${cls}`
+const addBtnPrefix = (cls = '') => `x-btn${cls}`
 const buttonCls = reactive([
   addBtnPrefix(),
   addBtnPrefix('-' + (type ? type : 'default')),
