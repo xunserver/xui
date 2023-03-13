@@ -3,21 +3,19 @@
 @unit-width: (100% / @unit-count);
 @prefix: (@grid-prefix-cls);
 
-.@{prefix} {
-  &-row {
-    .clearfix();
-    width: 100%;
-    display: block;
-    height: auto;
+.@{prefix}-row {
+  .clearfix();
+  width: 100%;
+  display: block;
+  height: auto;
+}
 
-    .@{prefix}-col {
-      float: left;
-    }
-  }
+.@{prefix}-col {
+  float: left;
+}
 
-  each(range(@unit-count), {
+each(range(@unit-count), {
     .@{prefix}-col-@{value} {
         width: (@unit-width * @value)
     }
 });
-}
