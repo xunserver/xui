@@ -22,3 +22,23 @@ Then restart the coding agent.
 The Superpowers sources live in `vendor/superpowers`. Cursor also discovers them through `.agents/skills/superpowers`. Codex enables the vendored plugin from `.agents/plugins/marketplace.json`.
 
 If you already installed Superpowers from the Cursor or Codex marketplace, you can keep the marketplace copy disabled in this repo to avoid duplicate skills.
+
+## Development
+
+```bash
+corepack enable
+corepack prepare pnpm@11.25.0 --activate
+pnpm install
+pnpm verify
+pnpm test:browser
+```
+
+`pnpm verify` builds unbundled ESM, typechecks, runs contract tests, and dry-run packs public packages.
+
+Consumer fixtures live in `fixtures/`:
+
+- `vite-react` — Vite + React 19 + Tailwind CSS v4 + official trading-dark
+- `no-tailwind` — same stack without Tailwind
+- `company-theme` — replaces official theme CSS
+- `next-rsc` — Next.js 15 App Router server page
+

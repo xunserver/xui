@@ -1,6 +1,6 @@
 # XUI Agent Instructions
 
-This repository is an XUI v1 workspace. Architecture is frozen in `docs/architecture.md`. Implementation has not started yet.
+This repository is an XUI v1 workspace. Architecture is frozen in `docs/architecture.md`. Phase 0 repository foundation is specified in docs/superpowers/plans/2026-09-16-phase-0-repository-foundation.md.
 
 ## Superpowers
 
