@@ -10,9 +10,11 @@
   "scripts": {
     "build": "tsc -b --pretty false && node scripts/copy-css.mjs",
     "typecheck": "tsc -b --pretty false",
-    "test": "vitest run"
+    "test": "vitest run",
+    "changeset": "changeset"
   },
   "devDependencies": {
+    "@changesets/cli": "3.0.3",
     "@types/node": "22.20.3",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
