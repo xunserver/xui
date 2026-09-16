@@ -1,0 +1,9 @@
+# Project-scoped Codex config. Loaded only when this repository is trusted.
+
+[mcp_servers.codebase-memory-mcp]
+command = "npx"
+args = ["-y", "codebase-memory-mcp@0.11.0"]
+startup_timeout_sec = 120
+
+[plugins."superpowers@xui"]
+enabled = true
