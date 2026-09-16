@@ -1,5 +1,7 @@
 # Phase 0 Repository Foundation Implementation Plan
 
+> **Phase index:** [2026-09-16-xui-v1-phase-index.md](./2026-09-16-xui-v1-phase-index.md). This file is the **only** phase that currently has a TDD implementation plan. Do not start Phases 1–11 from this document.
+>
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Stand up the XUI pnpm monorepo so `@xui/theme`, `@xui/react`, `@xui/tailwind`, and `@xui/data-grid` are real packages with explicit exports, an unbundled ESM library build, Vitest + Playwright, Changesets, consumer fixtures, and CI — without implementing tokens or components yet.
@@ -2498,15 +2500,9 @@ git commit -m "ci: run verify and Playwright fixtures on Node 22"
 
 ---
 
-## Out of scope (follow-up plans)
+## Out of scope (follow-up phases)
 
-Do not implement these in this plan. After Phase 0 merges, write new plan files:
-
-1. `docs/superpowers/plans/YYYY-MM-DD-phase-1-design-foundation.md` — semantic tokens, trading-dark/light values, density, typography, motion, CSS layers, Tailwind bridge mappings (`docs/architecture.md` §§4–8, 50–51).
-2. `docs/superpowers/plans/YYYY-MM-DD-phase-2-internal-infrastructure.md` — composition `render`, `mergeProps` / `mergeRefs`, controlled state, primitive adapter, portal, focus, overlay, presence (`docs/architecture.md` §§9–14, 62 Phase 2).
-3. `docs/superpowers/plans/YYYY-MM-DD-phase-3-first-validation-components.md` — Button, Input, Field, Popover, Dialog only (`docs/architecture.md` §62 Phase 3, §§15–16, 19–20).
-
-Later phases (forms, overlay/navigation, desktop, DataGrid beta, trading-terminal, 1.0 RC) stay blocked on those plans.
+Do not implement Phases 1–11 in this plan. The full split lives in [2026-09-16-xui-v1-phase-index.md](./2026-09-16-xui-v1-phase-index.md). After this plan lands, write a **new** TDD implementation plan for Phase 1 from [2026-09-16-phase-1-design-foundation.md](./2026-09-16-phase-1-design-foundation.md) — do not expand this file.
 
 ---
 
