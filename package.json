@@ -12,6 +12,8 @@
     "typecheck": "tsc -b --pretty false",
     "test": "vitest run",
     "test:browser": "pnpm --filter \"./fixtures/**\" run build && playwright test",
+    "pack:check": "pnpm build && pnpm --filter \"./packages/**\" exec npm pack --dry-run",
+    "verify": "pnpm build && pnpm typecheck && pnpm test && pnpm pack:check",
     "changeset": "changeset"
   },
   "devDependencies": {
