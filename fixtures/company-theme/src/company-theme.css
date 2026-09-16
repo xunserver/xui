@@ -1,0 +1,4 @@
+[data-xui-theme="company"] {
+  /* Company replacement theme. Token names land in Phase 1; this fixture proves the import path. */
+  color-scheme: light;
+}
