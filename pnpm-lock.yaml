@@ -18,6 +18,8 @@ importers:
         specifier: 3.2.4
         version: 3.2.4(@types/node@22.20.3)
 
+  packages/theme: {}
+
 packages:
 
   '@esbuild/aix-ppc64@0.28.2':
