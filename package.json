@@ -8,10 +8,16 @@
     "pnpm": ">=11"
   },
   "scripts": {
+    "build": "tsc -b --pretty false && node scripts/copy-css.mjs",
+    "typecheck": "tsc -b --pretty false",
     "test": "vitest run"
   },
   "devDependencies": {
     "@types/node": "22.20.3",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "typescript": "5.9.2",
     "vitest": "3.2.4"
   }
