@@ -1,0 +1,25 @@
+{
+  "name": "@xui/tailwind",
+  "version": "0.0.0",
+  "description": "Optional Tailwind CSS v4 bridge for XUI semantic tokens.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": ["**/*.css"],
+  "exports": {
+    ".": "./src/index.css",
+    "./index.css": "./src/index.css",
+    "./package.json": "./package.json"
+  },
+  "files": ["src", "README.md"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    }
+  }
+}

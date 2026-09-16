@@ -1,6 +1,7 @@
 {
   "files": [],
   "references": [
-    { "path": "./packages/react" }
+    { "path": "./packages/react" },
+    { "path": "./packages/data-grid" }
   ]
 }
