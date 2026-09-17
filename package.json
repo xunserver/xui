@@ -1,0 +1,30 @@
+{
+  "name": "xui",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=22.13.0",
+    "pnpm": ">=11"
+  },
+  "scripts": {
+    "build": "tsc -b --pretty false && node scripts/copy-css.mjs",
+    "typecheck": "tsc -b --pretty false",
+    "test": "vitest run",
+    "test:browser": "pnpm --filter \"./fixtures/**\" run build && playwright test",
+    "pack:check": "pnpm build && pnpm --filter \"./packages/**\" exec npm pack --dry-run",
+    "verify": "pnpm build && pnpm typecheck && pnpm test && pnpm pack:check",
+    "changeset": "changeset"
+  },
+  "devDependencies": {
+    "@changesets/cli": "3.0.3",
+    "@playwright/test": "1.55.0",
+    "@types/node": "22.20.3",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "typescript": "5.9.2",
+    "vitest": "3.2.4"
+  }
+}

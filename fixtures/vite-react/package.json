@@ -1,0 +1,24 @@
+{
+  "name": "@xui/fixture-vite-react",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173 --strictPort"
+  },
+  "dependencies": {
+    "@xui/react": "workspace:*",
+    "@xui/theme": "workspace:*",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwindcss": "4.3.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "@vitejs/plugin-react": "5.1.4",
+    "vite": "7.1.12"
+  }
+}

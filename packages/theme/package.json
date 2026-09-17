@@ -1,0 +1,18 @@
+{
+  "name": "@xui/theme",
+  "version": "0.0.0",
+  "description": "XUI semantic theme CSS (trading-dark / trading-light).",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": ["**/*.css"],
+  "exports": {
+    "./tokens.css": "./src/tokens.css",
+    "./trading-dark.css": "./src/trading-dark.css",
+    "./trading-light.css": "./src/trading-light.css",
+    "./package.json": "./package.json"
+  },
+  "files": ["src", "README.md"],
+  "publishConfig": {
+    "access": "public"
+  }
+}
